@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import imageData from "../imageData";
+import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 
 const Carousel = () => {
   const [activeImg, setActiveImg] = useState(1);
@@ -12,7 +13,7 @@ const Carousel = () => {
           className="left"
           onClick={() => activeImg > 0 && setActiveImg(activeImg - 1)}
         >
-          Left
+          <MdArrowBackIos size={50} />
         </button>
         <img
           src={imageData[activeImg].url}
@@ -24,7 +25,7 @@ const Carousel = () => {
             activeImg < imageData.length - 1 && setActiveImg(activeImg + 1)
           }
         >
-          Right
+          <MdArrowForwardIos size={50} />
         </button>
       </div>
     </div>
