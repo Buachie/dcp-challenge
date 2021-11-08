@@ -23,23 +23,43 @@ body {
 
 .carousel {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 600px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  width: 70%;
+  //height: 600px;
 
   button {
     position: absolute;
+    z-index: 3;
     top: 50%;
     cursor: pointer;
-    background-color: #fff;
+    background: transparent;
     border: none;
     border-radius: 50%;
     &.left {
-      left: 32px;
+      left: 0px;
     }
     &.right {
-      right: 32px;
+      right: 0px;
     }
+  }
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  box-shadow: -3px -1px 46px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -3px -1px 46px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -3px -1px 46px -1px rgba(0, 0, 0, 0.75);
+}
+.image {
+  opacity: 0;
+  transition: 1s ease;
+  width: 100%;
+  &.active {
+    opacity: 1;
+    transition: 1s;
+    transform: scale(1.08);
   }
 }

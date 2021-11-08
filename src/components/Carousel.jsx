@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import imageData from "../imageData";
-import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
+import {
+  IoIosArrowDroprightCircle,
+  IoIosArrowDropleftCircle,
+} from "react-icons/io";
 
 const Carousel = () => {
   const [activeImg, setActiveImg] = useState(0);
@@ -21,12 +24,11 @@ const Carousel = () => {
 
   return (
     <div className="carousel">
-      {/* Checks if the value of the array is greater than 0. If it is slider will not continue */}
       <button className="left" onClick={prevImage}>
-        <MdArrowBackIos size={50} />
+        <IoIosArrowDropleftCircle size={50} />
       </button>
       <button className="right" onClick={nextImage}>
-        <MdArrowForwardIos size={50} />
+        <IoIosArrowDroprightCircle size={50} />
       </button>
 
       {imageData.map((image, index) => {
