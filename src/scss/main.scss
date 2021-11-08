@@ -11,4 +11,25 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  background-color: aquamarine;
+}
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  max-width: 60%;
+  height: 600px;
+  .carousel-inner {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
 }
