@@ -1,6 +1,6 @@
 const imageData = [
   {
-    imageId: 1,
+    imageNumber: 1,
     description: "The number one",
     url: "/images/1.png",
   },
